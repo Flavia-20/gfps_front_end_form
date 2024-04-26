@@ -1,0 +1,70 @@
+body{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+/*inicio cabeçalho*/
+
+.Cabecalhodiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    margin: 2%;
+  }
+  
+.CabecalhoHeader {
+    background-color: #000DFF;
+    min-height: 25vh;
+    min-width: 15vw;
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    font-size: calc(10px + 2vmin);
+    color: rgb(255, 244, 244);
+    border-radius: 15px;
+    flex-wrap: wrap;
+}
+  
+.Cabecalhologo {
+    height: 20vmin;
+    pointer-events: none;
+    align-items: left;
+
+}
+
+h1{
+    width: 70%; 
+}
+
+    /*fim cabeçalho*/
+
+/*cards*/
+ 
+.CardDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    margin: 2%;
+}
+  
+.FormCard{
+    background-color: #ABF7FF;
+    min-height: 30vh;
+    min-width: 15vw;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: calc(10px + 2vmin);
+    color: rgb(0, 0, 0);
+    border-radius: 40px;
+    flex-wrap: wrap;
+}
+/*fim dos cards/*
