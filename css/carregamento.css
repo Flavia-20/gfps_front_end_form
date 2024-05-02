@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000DFF;
+}
+
+#content {
+    /*text-align: center;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#imagem{
+    width: 15%;
+    height: 20%;
+}
+
+#loading-bar {
+    width: 20%;
+    height: 20px;
+    background-color: #f1f1f2;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+#progress {
+    width: 0%;
+    height: 100%;
+    background-color: #00E7FF;
+    border-radius: 20px;
+    
+}
