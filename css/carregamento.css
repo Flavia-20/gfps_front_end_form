@@ -18,21 +18,20 @@ body {
 }
 
 #imagem{
-    width: 15%;
-    height: 20%;
+    height: 40vmin;
 }
 
 #loading-bar {
-    width: 20%;
-    height: 20px;
+    width: 40vmin;
+    height: 4vmin;
     background-color: #f1f1f2;
     margin-top: 20px;
     border-radius: 20px;
 }
 
 #progress {
-    width: 0%;
-    height: 100%;
+    width: 40vmin;
+    height: 4vmin;
     background-color: #00E7FF;
     border-radius: 20px;
     

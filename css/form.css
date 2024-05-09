@@ -20,6 +20,7 @@ main{
     align-items: center;
     padding: 2%;
     margin: 2%;
+    position: relative;
 }
   
 .CabecalhoHeader {
@@ -53,41 +54,42 @@ h1{
     flex-direction: column;
     align-items: center;
     border-radius: 40px;
-    position: absolute;
-    margin-top: 9%;
+    position: relative;/*de absolute mudei para relative como no CabecalhoDiv*/
     z-index: -1;
    
 }
   
 .FormCabecalho{
     background-color: #ABF7FF;
-    min-height: 32vh;
-    min-width: 15vw;
     width: 70vw;
+    height: 20vh;
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: calc(10px + 2vmin);
     color: rgb(0, 0, 0);
     border-radius: 40px;
-    flex-wrap: wrap;
     box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.308);
 }
 /*fim cabeçalho*/
 
 /* inicio dos cards*/
 #container{
-    margin-top: 15%;
-} 
-
-.CardDiv{
+    margin-bottom: 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
+} 
+
+.CardDiv{
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
     border-radius: 10px;
     margin: 2%;
 }
   
-.FormCard{
+.FormCardPergunta{
     background-color: #ABF7FF;
     min-height: 30vh;
     min-width: 15vw;
