@@ -1,56 +1,32 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
-
-/*@font-face {
-  font-family: "Rubik", sans-serif;
-  src: url("https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap");
-  font-weight: 700;
-  font-style: normal;
-}*/
-body{
+body {
   margin: 0;
+  padding: 0;
+  background-color: #000DFF; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh;
 }
 
-.Home {
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
   text-align: center;
+  margin-left: 530px;
+  margin-top: 180px
 }
 
-.HomeDiv {
-  background-color: #000DFF;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-  
-.HomeLogo {
-  height: 60vmin;
+.mySlides {
+  width: 80%;
+  display: inline-block;
 }
 
-.HomeButton {
-  color: #FFFFFF;
-  background-color: #00E7FF;
-  border: none;
-  border-radius: 40px;
-  width: 60vmin;
-  height: 7vmin;
-  cursor: pointer;
-  box-shadow: 4px 4px 15px black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-  
-a{
-  text-decoration: none;
-  color: white;
-  font-family: "Rubik", sans-serif;
-  font-size: 25px;
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
 }
 
-
-
-  
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
