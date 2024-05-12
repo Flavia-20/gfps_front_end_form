@@ -3,7 +3,8 @@ const url = "https://formularioapijava.azurewebsites.net/formulario";
 /*const url = fetch("https://formularioapijava.azurewebsites.net/formulario")
 console.log(url)*/
 
-const FormCabecalho = document.querySelector(".FormCabecalho");
+//pegando as tags do HTML
+const FormCabecalho = document.querySelector(".CardCabecalho");
 const FormCardPergunta = document.querySelector("#container");
 
 async function getForm(){
@@ -15,25 +16,51 @@ async function getForm(){
         console.log(data)
     
         data.forEach((formulario)=>{
-        
+            //trabalhando com a descrição do formulário
             const divform = document.createElement("div");
             const descricaoFormulario = document.createElement("p");
 
-            const CardDivPergunta = document.createElement('div');
-            const FormCardPergunta = document.createElement('div');
-            const pergunta = document.createElement('p');
+            descricaoFormulario.innerHTML = formulario.descricao;
 
-            descricaoFormulario.innerHTML = formulario.descricaoFormulario;
-            pergunta.innerHTML = formulario.perguntasEntities[0].informacaoPergunta;  
-           
-            CardDivPergunta.setAttribute("class", "CardDiv");
-            FormCardPergunta.setAttribute("class", "FormCardPergunta");
+            divform.setAttribute("class","FormCabecalho");
 
             divform.appendChild(descricaoFormulario);
-            FormCardPergunta.appendChild(pergunta);
-        
             FormCabecalho.appendChild(divform);
-            container.appendChild(FormCardPergunta);
+
+            //trabalhando com as perguntas 
+            formulario.perguntasEntities.forEach((pergunta) => {
+
+                const CardDivPergunta = document.createElement('div');
+                const FormCardPergunta = document.createElement('div');
+                const perguntaElemento = document.createElement('p');
+                //const id = document.createElement('p');
+
+                CardDivPergunta.setAttribute("class", "CardDiv");
+                FormCardPergunta.setAttribute("class", "FormCardPergunta");
+                       
+                perguntaElemento.innerHTML = pergunta.descricao;
+                //id.innerHTML = pergunta.id;
+
+                //FormCardPergunta.appendChild(id);
+                FormCardPergunta.appendChild(perguntaElemento);
+                CardDivPergunta.appendChild(FormCardPergunta);
+
+            
+                container.appendChild(FormCardPergunta);
+
+                pergunta.alternativaEntities.forEach((alternativas)=>{
+                    //const input = document.createElement('input');
+                    const respostaElemento = document.createElement('p');
+
+                    //input.setAttribute("type","radio");
+                   
+                    respostaElemento.innerHTML = alternativas.descricao;
+
+                    FormCardPergunta.appendChild(respostaElemento);
+                    //FormCardPergunta.appendChild(input);
+                    
+                });
+            });  
         });
 
     } catch (error) {

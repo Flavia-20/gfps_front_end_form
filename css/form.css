@@ -1,5 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
 
+/* importação da fonte
+ <uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 300 to 900
+ 
+ .rubik-<uniquifier> {
+   font-family: "Rubik", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: <weight>;
+   font-style: normal;
+ }
+*/
 body{
     background-color: #D4FAFF;
 }
@@ -13,8 +23,7 @@ main{
 }
 
 /*inicio cabeçalho*/
-
-.Cabecalhodiv{
+/*.Cabecalhodiv{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,8 +55,12 @@ main{
 }
 
 h1{
-    width: 70%; 
-}
+    width: 70%;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}*/
 
 .CardCabecalho{
     display: flex;
@@ -62,23 +75,25 @@ h1{
 .FormCabecalho{
     background-color: #ABF7FF;
     width: 70vw;
-    height: 20vh;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: rgb(0, 0, 0);
-    border-radius: 40px;
+    border-radius: 20px;
     box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.308);
+    
 }
 /*fim cabeçalho*/
 
 /* inicio dos cards*/
 #container{
-    margin-bottom: 15%;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 2rem;
 } 
 
 .CardDiv{
@@ -95,50 +110,205 @@ h1{
     min-width: 15vw;
     width: 70vw;
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column;
+    /*align-items: center;*/
     font-size: calc(10px + 2vmin);
     color: rgb(0, 0, 0);
     border-radius: 20px;
-    flex-wrap: wrap;
     box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.308);
+}
+
+/*.DivRadio{
+    padding-left: 3%;
+    margin: 1%;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    color: red;
+}*/
+
+p{
+    padding-left: 3%;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 /*fim dos cards/*
 
 /*Botão*/
 
-#cadastrar{
+#botoes{
     display: flex;
     flex-wrap: wrap;
     column-gap: 4rem;
     margin: 1%;
-    justify-content: center;
-    justify-content: space-around;
+    justify-content:space-around
+   
 }
 
 button{
     background-color:#000DFF;
     color: white;
+    height: 10%;
+    width: 10%;
     padding: 0.7%;
-    width: 12%;
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    font-size: 13px;
     font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
+
 
 #btnReset{
     background-color:#ffffff00;
     color: #000DFF;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 17px;
     font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
 }
 
 a{
     text-decoration: none;
     color: white;
-    font-size: 15px;
+    font-size: 130%;
+}
+/*Botão*/
+
+    /* For mobile phones: */
+@media only screen and (min-width: 200px) {
+    .Cabecalhologo {
+        height: 25vmin;
+        pointer-events: none;
+        
+    }
+
+    .Cabecalhodiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2%;
+        margin: 2%;
+        position: relative;
+        
+    }
+        
+    .CabecalhoHeader {
+        background-color: #000DFF;
+        min-height: 25vh;
+        min-width: 15vw;
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-start;
+        color: rgb(255, 244, 244);
+        border-radius: 15px;
+        box-shadow: 7px 0px 10px rgba(0, 0, 0, 0.308);
+    }
+
+    h1{
+        width: 80%;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+    }
+
 }
 
-/*Botão*/
+@media only screen and (min-width: 700px) {
+    /* For tablets: */
+    .Cabecalhologo {
+        height: 20vmin;
+        pointer-events: none;
+        align-items: left;
+    }
+
+    .Cabecalhodiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2%;
+        margin: 2%;
+        position: relative;
+        
+    }
+        
+    .CabecalhoHeader {
+        background-color: #000DFF;
+        min-height: 25vh;
+        min-width: 15vw;
+        width: 70vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-around;
+        color: rgb(255, 244, 244);
+        border-radius: 15px;
+        box-shadow: 7px 0px 10px rgba(0, 0, 0, 0.308);
+    }
+
+    h1{
+        width: 50%;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 40px;
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+    /* For desktop: */
+    .Cabecalhologo {
+        height: 25vmin;
+        pointer-events: none;
+        align-items: left;
+    }   
+    
+    .Cabecalhodiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2%;
+        margin: 2%;
+        position: relative;
+    }
+      
+    .CabecalhoHeader {
+        background-color: #000DFF;
+        min-height: 25vh;
+        min-width: 15vw;
+        width: 70vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-around;
+        font-size: calc(10px + 2vmin);
+        color: rgb(255, 244, 244);
+        border-radius: 15px;
+        flex-wrap: wrap;
+        box-shadow: 7px 0px 10px rgba(0, 0, 0, 0.308);
+    }
+
+    h1{
+        width: 70%;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 40px;
+    }
+
+}
