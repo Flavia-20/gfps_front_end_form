@@ -28,8 +28,11 @@ async function getForm(){
             FormCabecalho.appendChild(divform);
 
             //trabalhando com as perguntas 
-            formulario.perguntasEntities.forEach((pergunta) => {
 
+            const startIndex = 0;
+            const endIndex = 3;
+            formulario.perguntasEntities.slice(startIndex, endIndex).forEach((pergunta) => {
+            
                 const CardDivPergunta = document.createElement('div');
                 const FormCardPergunta = document.createElement('div');
                 const perguntaElemento = document.createElement('p');
@@ -45,20 +48,25 @@ async function getForm(){
                 FormCardPergunta.appendChild(perguntaElemento);
                 CardDivPergunta.appendChild(FormCardPergunta);
 
-            
                 container.appendChild(FormCardPergunta);
 
                 pergunta.alternativaEntities.forEach((alternativas)=>{
-                    //const input = document.createElement('input');
-                    const respostaElemento = document.createElement('p');
+                    const alternativaContainer = document.createElement('div');
+                    const respostaElemento = document.createElement('input');
 
-                    //input.setAttribute("type","radio");
-                   
-                    respostaElemento.innerHTML = alternativas.descricao;
+                    respostaElemento.setAttribute("type","radio");
+                    //respostaElemento.setAttribute("name", "alternativa"); 
+                    respostaElemento.setAttribute("value", alternativas.descricao);
 
-                    FormCardPergunta.appendChild(respostaElemento);
-                    //FormCardPergunta.appendChild(input);
-                    
+                    const label = document.createElement('label');
+                    label.textContent = alternativas.descricao;
+
+                    alternativaContainer.appendChild(respostaElemento);
+                    alternativaContainer.appendChild(label);
+
+
+                    FormCardPergunta.appendChild(alternativaContainer);
+
                 });
             });  
         });

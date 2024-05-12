@@ -68,7 +68,7 @@ h1{
     flex-direction: column;
     align-items: center;
     border-radius: 40px;
-    position: relative;/*de absolute mudei para relative como no CabecalhoDiv*/
+    position: relative;
     z-index: -1;
    
 }
@@ -90,10 +90,11 @@ h1{
 
 /* inicio dos cards*/
 #container{
-    margin-bottom: 15%;
+    margin-bottom: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    row-gap: 2rem;
 } 
 
 .CardDiv{
@@ -118,14 +119,16 @@ h1{
     box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.308);
 }
 
-.DivRadio{
-    padding-left: 3%;
+input{
+    margin-left: 3%;
+}
+
+label{
     margin: 1%;
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    color: red;
 }
 
 p{

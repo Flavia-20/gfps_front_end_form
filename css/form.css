@@ -11,7 +11,7 @@
  }
 */
 body{
-    background-color: #D4FAFF;
+    background-color: #d4faff;
 }
 
 main{
@@ -118,15 +118,17 @@ h1{
     box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.308);
 }
 
-/*.DivRadio{
-    padding-left: 3%;
+input{
+    margin-left: 3%;
+}
+
+label{
     margin: 1%;
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    color: red;
-}*/
+}
 
 p{
     padding-left: 3%;
@@ -138,14 +140,12 @@ p{
 /*fim dos cards/*
 
 /*Botão*/
-
 #botoes{
     display: flex;
     flex-wrap: wrap;
     column-gap: 4rem;
     margin: 1%;
-    justify-content:space-around
-   
+    justify-content:space-around;   
 }
 
 button{
@@ -163,7 +163,6 @@ button{
     font-weight: 300;
     font-style: normal;
 }
-
 
 #btnReset{
     background-color:#ffffff00;
@@ -187,8 +186,7 @@ a{
 @media only screen and (min-width: 200px) {
     .Cabecalhologo {
         height: 25vmin;
-        pointer-events: none;
-        
+        pointer-events: none;   
     }
 
     .Cabecalhodiv{
@@ -197,8 +195,7 @@ a{
         align-items: center;
         padding: 2%;
         margin: 2%;
-        position: relative;
-        
+        position: relative;    
     }
         
     .CabecalhoHeader {

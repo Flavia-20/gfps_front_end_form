@@ -20,7 +20,7 @@ async function getForm(){
             const divform = document.createElement("div");
             const descricaoFormulario = document.createElement("p");
 
-            descricaoFormulario.innerHTML = formulario.descricaoFormulario;
+            descricaoFormulario.innerHTML = formulario.descricao;
 
             divform.setAttribute("class","FormCabecalho");
 
@@ -28,19 +28,43 @@ async function getForm(){
             FormCabecalho.appendChild(divform);
 
             //trabalhando com as perguntas 
-            const CardDivPergunta = document.createElement('div');
-            const FormCardPergunta = document.createElement('div');
-            const pergunta = document.createElement('p');
+            const startIndex = 4;
+            const endIndex = 6;
+            formulario.perguntasEntities.slice(startIndex, endIndex).forEach((pergunta) => {
             
-            pergunta.innerHTML = formulario.perguntasEntities[0].informacaoPergunta;  
-            
-            CardDivPergunta.setAttribute("class", "CardDiv");
-            FormCardPergunta.setAttribute("class", "FormCardPergunta");
+                const CardDivPergunta = document.createElement('div');
+                const FormCardPergunta = document.createElement('div');
+                const perguntaElemento = document.createElement('p');
 
-            FormCardPergunta.appendChild(pergunta);
-            CardDivPergunta.appendChild(FormCardPergunta);
-        
-            container.appendChild(CardDivPergunta);
+                CardDivPergunta.setAttribute("class", "CardDiv");
+                FormCardPergunta.setAttribute("class", "FormCardPergunta");
+                       
+                perguntaElemento.innerHTML = pergunta.descricao;
+
+                FormCardPergunta.appendChild(perguntaElemento);
+                CardDivPergunta.appendChild(FormCardPergunta);
+
+            
+                container.appendChild(FormCardPergunta);
+
+                pergunta.alternativaEntities.forEach((alternativas)=>{
+                    const alternativaContainer = document.createElement('div');
+                    const respostaElemento = document.createElement('input');
+
+                    respostaElemento.setAttribute("type","radio");
+                    //respostaElemento.setAttribute("name", "alternativa"); 
+                    respostaElemento.setAttribute("value", alternativas.descricao);
+
+                    const label = document.createElement('label');
+                    label.textContent = alternativas.descricao;
+
+                    alternativaContainer.appendChild(respostaElemento);
+                    alternativaContainer.appendChild(label);
+
+                    FormCardPergunta.appendChild(alternativaContainer);
+
+                });
+            });  
         });
 
     } catch (error) {
