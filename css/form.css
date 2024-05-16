@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
 
 body{
-    background-color: #D4FAFF;
+    background-color: #f6f7f9
+    ;
 }
 
 main{
-    border: 1px solid black;
+    border: 1px solid #121481;
     border-radius: 10px;
     margin-right: 10%;
     margin-left: 10%;
@@ -60,7 +61,7 @@ h1{
 }
   
 .FormCabecalho{
-    background-color: #ABF7FF;
+    background-color: #D4FAFF;
     width: 70vw;
     height: 20vh;
     display: flex;
@@ -90,7 +91,7 @@ h1{
 }
   
 .FormCardPergunta{
-    background-color: #ABF7FF;
+    background-color: #D4FAFF;
     min-height: 30vh;
     min-width: 15vw;
     width: 70vw;
@@ -119,12 +120,13 @@ h1{
 button{
     background-color:#000DFF;
     color: white;
-    padding: 0.7%;
-    width: 12%;
+    padding: 0.7% 2%;
+    width: auto;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-family: "Rubik", sans-serif;
+    white-space: nowrap;
 }
 
 #btnReset{

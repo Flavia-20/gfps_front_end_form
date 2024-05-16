@@ -32,7 +32,7 @@ body{
 
 .HomeButton {
   color: #FFFFFF;
-  background-color: #00E7FF;
+  background-color: #03C4EB;
   border: none;
   border-radius: 40px;
   width: 60vmin;
@@ -41,9 +41,14 @@ body{
   box-shadow: 4px 4px 15px black;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
+  transition: background-color 0.3s ease;
 }
-  
+
+.HomeButton:hover {
+  background-color: #00E7FF;
+}
+ 
 a{
   text-decoration: none;
   color: white;

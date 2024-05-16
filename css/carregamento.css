@@ -32,7 +32,7 @@ body {
 #progress {
     width: 40vmin;
     height: 4vmin;
-    background-color: #00E7FF;
+    background-image: linear-gradient(to right, #1640D6, #00E7FF);
     border-radius: 20px;
     
 }
