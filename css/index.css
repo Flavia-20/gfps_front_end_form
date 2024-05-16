@@ -1,24 +1,26 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #000DFF; 
-  justify-content: center; 
-  align-items: center; 
+  background-color: #000DFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 
 .slideshow-container {
-  max-width: 500px;
+  max-width: 70%; 
   position: relative;
   margin: auto;
   text-align: center;
-  margin-left: 530px;
-  margin-top: 180px
 }
 
 .mySlides {
-  width: 80%;
-  display: inline-block;
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 80vh; 
+  width: 100%;
 }
 
 .fade {
@@ -27,6 +29,15 @@ body {
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from { opacity: .4; }
+  to { opacity: 1; }
+}
+
+@media screen and (max-width: 768px) {
+  .slideshow-container {
+    max-width: 100%; 
+  }
+  .mySlides {
+    height: 50vh; 
+  }
 }
