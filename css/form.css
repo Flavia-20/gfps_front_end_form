@@ -11,7 +11,7 @@
  }
 */
 body{
-    background-color: #d4faff;
+    background-color: #f6f7f9;
 }
 
 main{
@@ -154,7 +154,7 @@ button{
     padding: 0.7% 2%;
     width: auto;
     height: 10%;
-    width: 10%;
+    width: auto;
     padding: 0.7%;
     border: none;
     border-radius: 10px;
@@ -168,11 +168,13 @@ button{
     background-color:#ffffff00;
     color: #000DFF;
     cursor: pointer;
-    font-size: 17px;
+    font-size: 15px;
     font-family: "Rubik", sans-serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
+    white-space: nowrap;
+    padding: 0.7% 2%;
 }
 
 a{

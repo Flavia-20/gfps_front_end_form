@@ -11,7 +11,7 @@
 } */
 
 body{
-    background-color: #D4FAFF;
+    background-color: #f6f7f9;
 }
 
 main{
@@ -74,7 +74,7 @@ h1{
 }
   
 .FormCabecalho{
-    background-color: #ABF7FF;
+    background-color: #D4FAFF;
     width: 70vw;
     height: 30vh;
     display: flex;
@@ -106,7 +106,7 @@ h1{
 }
   
 .FormCardPergunta{
-    background-color: #ABF7FF;
+    background-color: #D4FAFF;
     min-height: 30vh;
     min-width: 15vw;
     width: 70vw;
@@ -155,12 +155,13 @@ button{
     background-color:#000DFF;
     color: white;
     height: 10%;
-    width: 10%;
-    padding: 0.7%;
+    width: auto;
+    padding: 0.7% 2%;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-family: "Rubik", sans-serif;
+    white-space: nowrap;
 }
 
 #btnsubmit{
