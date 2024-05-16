@@ -12,6 +12,6 @@ slideIndex++;
         window.location.href = "../html/home.html";
     }
     slides[slideIndex-1].style.display = "block";  
-    setTimeout(showSlides, 1800); 
+    setTimeout(showSlides, 2200); 
 }
   

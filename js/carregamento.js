@@ -31,5 +31,6 @@
     }
 
     window.onload = function() {
+        atualizarBarraDeProgresso(progresso);
         simularCarregamento();
     };
