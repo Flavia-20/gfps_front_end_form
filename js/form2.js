@@ -28,26 +28,23 @@ async function getForm(){
             FormCabecalho.appendChild(divform);
 
             //trabalhando com as perguntas 
-
-            const startIndex = 0;
-            const endIndex = 3;
+            const startIndex = 4;
+            const endIndex = 6;
             formulario.perguntasEntities.slice(startIndex, endIndex).forEach((pergunta) => {
             
                 const CardDivPergunta = document.createElement('div');
                 const FormCardPergunta = document.createElement('div');
                 const perguntaElemento = document.createElement('p');
-                //const id = document.createElement('p');
 
                 CardDivPergunta.setAttribute("class", "CardDiv");
                 FormCardPergunta.setAttribute("class", "FormCardPergunta");
                        
                 perguntaElemento.innerHTML = pergunta.descricao;
-                //id.innerHTML = pergunta.id;
 
-                //FormCardPergunta.appendChild(id);
                 FormCardPergunta.appendChild(perguntaElemento);
                 CardDivPergunta.appendChild(FormCardPergunta);
 
+            
                 container.appendChild(FormCardPergunta);
 
                 pergunta.alternativaEntities.forEach((alternativas)=>{
@@ -63,7 +60,6 @@ async function getForm(){
 
                     alternativaContainer.appendChild(respostaElemento);
                     alternativaContainer.appendChild(label);
-
 
                     FormCardPergunta.appendChild(alternativaContainer);
 

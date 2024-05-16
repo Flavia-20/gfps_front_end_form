@@ -1,0 +1,185 @@
+
+/* importação da fonte 
+<uniquifier>: Use a unique and descriptive class name
+ <weight>: Use a value from 300 to 900
+ 
+ .rubik-<uniquifier> {
+   font-family: "Rubik", sans-serif;
+   font-optical-sizing: auto;
+   font-weight: <weight>;
+   font-style: normal;
+} */
+
+body{
+    background-color: #D4FAFF;
+}
+
+main{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+/*inicio cabeçalho*/
+
+.Cabecalhodiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    margin: 2%;
+    position: relative;
+}
+  
+.CabecalhoHeader {
+    background-color: #000DFF;
+    min-height: 25vh;
+    min-width: 15vw;
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:space-around;
+    font-size: calc(10px + 2vmin);
+    color: rgb(255, 244, 244);
+    border-radius: 15px;
+    flex-wrap: wrap;
+    box-shadow: 7px 0px 10px rgba(0, 0, 0, 0.308);
+}
+  
+.Cabecalhologo {
+    height: 20vmin;
+    pointer-events: none;
+    align-items: left;
+}
+
+h1{
+    width: 70%;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.CardCabecalho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    position: relative;
+    z-index: -1;
+   
+}
+  
+.FormCabecalho{
+    background-color: #ABF7FF;
+    width: 70vw;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.308);
+    
+}
+/*fim cabeçalho*/
+
+/* inicio dos cards*/
+#container{
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+} 
+
+.CardDiv{
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    border-radius: 10px;
+    margin: 2%;
+}
+  
+.FormCardPergunta{
+    background-color: #ABF7FF;
+    min-height: 30vh;
+    min-width: 15vw;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    font-size: calc(10px + 2vmin);
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.308);
+}
+
+input{
+    margin-left: 3%;
+}
+
+label{
+    margin: 1%;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+p{
+    padding-left: 3%;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+/*fim dos cards/*
+
+/*Botão*/
+
+#botoes{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    margin: 1%;
+    justify-content: center;
+    justify-content: center;
+}
+
+button{
+    background-color:#000DFF;
+    color: white;
+    height: 10%;
+    width: 10%;
+    padding: 0.7%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Rubik", sans-serif;
+}
+
+#btnsubmit{
+    height: 70%;
+    width: 70%;
+}
+
+#btnReset{
+    background-color:#ffffff00;
+    color: #000DFF;
+    cursor: pointer;
+    font-size: 15px;
+    font-family: "Rubik", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 130%;
+}
+
+/*Botão*/
