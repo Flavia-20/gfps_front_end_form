@@ -11,7 +11,7 @@
                 window.location.href = '../html/form.html';
             }
             atualizarBarraDeProgresso(progresso);
-        }, 1000);
+        }, 750);
     }
 
     /*
