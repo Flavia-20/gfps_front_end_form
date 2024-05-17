@@ -4,7 +4,7 @@ const url = "https://formularioapijava.azurewebsites.net/formulario";
 console.log(url)*/
 
 //pegando as tags do HTML
-const FormCabecalho = document.querySelector(".CardCabecalho");
+//const FormCabecalho = document.querySelector(".CardCabecalho");
 const FormCardPergunta = document.querySelector("#container");
 
 async function getForm(){
@@ -15,6 +15,7 @@ async function getForm(){
         const data = await response.json();
         console.log(data)
     
+        let perguntaContador = 1;
         data.forEach((formulario)=>{
             //trabalhando com a descrição do formulário
             const divform = document.createElement("div");
@@ -24,12 +25,12 @@ async function getForm(){
 
             divform.setAttribute("class","FormCabecalho");
 
-            divform.appendChild(descricaoFormulario);
-            FormCabecalho.appendChild(divform);
+            //divform.appendChild(descricaoFormulario);
+            //FormCabecalho.appendChild(divform);
 
             //trabalhando com as perguntas 
             const startIndex = 4;
-            const endIndex = 6;
+            const endIndex = 12;
             formulario.perguntasEntities.slice(startIndex, endIndex).forEach((pergunta) => {
             
                 const CardDivPergunta = document.createElement('div');
@@ -44,15 +45,17 @@ async function getForm(){
                 FormCardPergunta.appendChild(perguntaElemento);
                 CardDivPergunta.appendChild(FormCardPergunta);
 
-            
                 container.appendChild(FormCardPergunta);
 
+                //trabalhando com as alternativas
                 pergunta.alternativaEntities.forEach((alternativas)=>{
+                    const radioName = `pergunta_${perguntaContador}`;
+
                     const alternativaContainer = document.createElement('div');
                     const respostaElemento = document.createElement('input');
 
                     respostaElemento.setAttribute("type","radio");
-                    //respostaElemento.setAttribute("name", "alternativa"); 
+                    respostaElemento.setAttribute("name", radioName); 
                     respostaElemento.setAttribute("value", alternativas.descricao);
 
                     const label = document.createElement('label');
@@ -64,6 +67,7 @@ async function getForm(){
                     FormCardPergunta.appendChild(alternativaContainer);
 
                 });
+                perguntaContador++;
             });  
         });
 

@@ -4,7 +4,7 @@ const url = "https://formularioapijava.azurewebsites.net/formulario";
 console.log(url)*/
 
 //pegando as tags do HTML
-const FormCabecalho = document.querySelector(".CardCabecalho");
+//const FormCabecalho = document.querySelector(".CardCabecalho");
 const FormCardPergunta = document.querySelector("#container");
 
 async function getForm(){
@@ -25,12 +25,12 @@ async function getForm(){
 
             divform.setAttribute("class","FormCabecalho");
 
-            divform.appendChild(descricaoFormulario);
-            FormCabecalho.appendChild(divform);
+            //divform.appendChild(descricaoFormulario);
+            //FormCabecalho.appendChild(divform);
 
             //trabalhando com as perguntas 
-            const startIndex = 0;
-            const endIndex = 3;
+            const startIndex = 13;
+            const endIndex = 16;
             formulario.perguntasEntities.slice(startIndex, endIndex).forEach((pergunta) => {
             
                 const CardDivPergunta = document.createElement('div');
@@ -64,14 +64,13 @@ async function getForm(){
                     alternativaContainer.appendChild(respostaElemento);
                     alternativaContainer.appendChild(label);
 
-
                     FormCardPergunta.appendChild(alternativaContainer);
 
                 });
-
                 perguntaContador++;
             });  
         });
+
     } catch (error) {
         console.error('Erro:', error.message);
     }

@@ -67,7 +67,7 @@ h1{
     flex-direction: column;
     align-items: center;
     border-radius: 40px;
-    position: relative;/*de absolute mudei para relative como no CabecalhoDiv*/
+    position: relative;
     z-index: -1;
    
 }
@@ -94,6 +94,7 @@ h1{
     flex-direction: column;
     align-items: center;
     row-gap: 2rem;
+
 } 
 
 .CardDiv{
@@ -263,7 +264,7 @@ a{
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
-        font-size: 40px;
+        font-size: 30px;
     }
 
 }
