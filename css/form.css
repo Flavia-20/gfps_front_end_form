@@ -169,13 +169,13 @@ button{
     background-color:#ffffff00;
     color: #000DFF;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 18px;
     font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    white-space: nowrap;
-    padding: 0.7% 2%;
+    /* font-optical-sizing: auto; */
+    /* font-weight: 300; */
+    /* font-style: normal; */
+    /* white-space: nowrap; */
+    /* padding: 0.7% 2%; */
 }
 
 a{
