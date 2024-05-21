@@ -1,6 +1,6 @@
-const url = "https://formularioapijava.azurewebsites.net/formulario";
+const url = "https://apiformulariojava.azurewebsites.net/formulario";
 
-/*const url = fetch("https://formularioapijava.azurewebsites.net/formulario")
+/*const url = fetch("https://apiformulariojava.azurewebsites.net/formulario")
 console.log(url)*/
 
 //pegando as tags do HTML

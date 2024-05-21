@@ -1,6 +1,6 @@
-const url = "https://formularioapijava.azurewebsites.net/formulario";
+const url = "https://apiformulariojava.azurewebsites.net/formulario";
 
-/*const url = fetch("https://formularioapijava.azurewebsites.net/formulario")
+/*const url = fetch("https://apiformulariojava.azurewebsites.net/formulario")
 console.log(url)*/
 
 //pegando as tags do HTML
@@ -9,7 +9,7 @@ const FormCardPergunta = document.querySelector("#container");
 
 async function getForm(){
     try{
-        const response = await fetch(url);
+        const response =  await fetch(url);
         console.log(response);
     
         const data = await response.json();
@@ -36,16 +36,21 @@ async function getForm(){
                 const CardDivPergunta = document.createElement('div');
                 const FormCardPergunta = document.createElement('div');
                 const perguntaElemento = document.createElement('p');
+                //const idPergunta = document.createElement('p');
 
                 CardDivPergunta.setAttribute("class", "CardDiv");
                 FormCardPergunta.setAttribute("class", "FormCardPergunta");
                        
                 perguntaElemento.innerHTML = pergunta.descricao;
+                perguntaElemento.setAttribute('data-id',  pergunta.id);
 
+                //idPergunta.innerHTML = pergunta.id;
+
+                //FormCardPergunta.appendChild(idPergunta);
                 FormCardPergunta.appendChild(perguntaElemento);
                 CardDivPergunta.appendChild(FormCardPergunta);
 
-                container.appendChild(FormCardPergunta);
+                container.appendChild(CardDivPergunta);
 
                 //trabalhando com as alternativas
                 pergunta.alternativaEntities.forEach((alternativas)=>{
@@ -61,6 +66,8 @@ async function getForm(){
                     const label = document.createElement('label');
                     label.textContent = alternativas.descricao;
 
+                    label.setAttribute('data-id',  pergunta.id);
+
                     alternativaContainer.appendChild(respostaElemento);
                     alternativaContainer.appendChild(label);
 
@@ -68,11 +75,18 @@ async function getForm(){
 
                 });
                 perguntaContador++;
-            });  
+            });
         });
+    
 
     } catch (error) {
         console.error('Erro:', error.message);
     }
+
 }
+
 getForm()
+
+
+
+
