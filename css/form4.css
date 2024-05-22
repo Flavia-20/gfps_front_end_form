@@ -1,0 +1,286 @@
+
+body{
+    background-color: #f6f7f9;
+}
+
+main{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+
+.question {
+    background-color: #D4FAFF;
+        min-height: 25vh;
+        min-width: 25vw;
+        width: 60vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-around;
+        font-size: calc(10px + 2vmin);
+        color:black;
+        border-radius: 15px;
+        flex-wrap: wrap;
+        box-shadow: 7px 0px 10px rgba(0, 0, 0, 0.308);
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+
+
+.CardCabecalho{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 40px;
+    position: relative;
+    z-index: -1;
+   
+}
+  
+.FormCabecalho{
+    background-color: #D4FAFF;
+    width: 70vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.308);
+    margin-bottom: 2%;
+    
+}
+/*fim cabeçalho*/
+
+/* inicio dos cards*/
+#container{
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2rem;
+} 
+
+.CardDiv{
+    /*display: flex;
+    flex-direction: column;
+    align-items: center;*/
+    border-radius: 10px;
+    margin: 2%;
+}
+  
+.quizForm{
+    background-color: #D4FAFF;
+    min-height: 30vh;
+    min-width: 15vw;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    font-size: calc(10px + 2vmin);
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
+    box-shadow: 7px 5px 10px rgba(0, 0, 0, 0.308);
+}
+
+p{
+    padding-left: 3%;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+/*fim dos cards*/
+
+
+/*Botão*/
+
+#botoes{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 4rem;
+    margin: 1%;
+    justify-content: center;
+    justify-content: center;
+}
+
+button{
+    background-color:#000DFF;
+    color: white;
+    height: 10%;
+    width: auto;
+    padding: 0.7% 2%;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Rubik", sans-serif;
+    white-space: nowrap;
+    padding-left: 10px;
+}
+
+#btnsubmit{
+    height: 70%;
+    width: 70%;
+}
+
+#btnReset{
+    background-color:#ffffff00;
+    color: #000DFF;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Rubik", sans-serif;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 130%;
+}
+
+/*Botão*/
+
+ /* For mobile phones: */
+ @media only screen and (min-width: 200px) {
+    .Cabecalhologo {
+        height: 25vmin;
+        pointer-events: none;   
+    }
+
+    .Cabecalhodiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2%;
+        margin: 2%;
+        position: relative;    
+    }
+        
+    .CabecalhoHeader {
+        background-color: #000DFF;
+        min-height: 25vh;
+        min-width: 15vw;
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:flex-start;
+        color: rgb(255, 244, 244);
+        border-radius: 15px;
+        box-shadow: 7px 0px 10px rgba(0, 0, 0, 0.308);
+    }
+
+    h1{
+        width: 80%;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+    /* For tablets: */
+    .Cabecalhologo {
+        height: 20vmin;
+        pointer-events: none;
+        align-items: left;
+    }
+
+    .Cabecalhodiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2%;
+        margin: 2%;
+        position: relative;
+        
+    }
+        
+    .CabecalhoHeader {
+        background-color: #000DFF;
+        min-height: 25vh;
+        min-width: 15vw;
+        width: 70vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-around;
+        color: rgb(255, 244, 244);
+        border-radius: 15px;
+        box-shadow: 7px 0px 10px rgba(0, 0, 0, 0.308);
+    }
+
+    h1{
+        width: 50%;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 30px;
+    }
+
+}
+
+@media only screen and (min-width: 900px) {
+    /* For desktop: */
+    .Cabecalhologo {
+        height: 25vmin;
+        pointer-events: none;
+        align-items: left;
+    }   
+    
+    .Cabecalhodiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2%;
+        margin: 2%;
+        position: relative;
+    }
+      
+    .CabecalhoHeader {
+        background-color: #000DFF;
+        min-height: 25vh;
+        min-width: 15vw;
+        width: 70vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content:space-around;
+        font-size: calc(10px + 2vmin);
+        color: rgb(255, 244, 244);
+        border-radius: 15px;
+        flex-wrap: wrap;
+        box-shadow: 7px 0px 10px rgba(0, 0, 0, 0.308);
+    }
+
+    h1{
+        width: 70%;
+        font-family: "Rubik", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        font-size: 40px;
+    }
+}
+
+
+
