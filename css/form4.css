@@ -121,13 +121,14 @@ button{
     color: white;
     height: 10%;
     width: auto;
-    padding: 0.7% 2%;
+    padding:1%;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-family: "Rubik", sans-serif;
     white-space: nowrap;
     padding-left: 10px;
+    font-size: large;
 }
 
 #btnsubmit{
@@ -150,7 +151,7 @@ button:hover {
 a{
     text-decoration: none;
     color: white;
-    font-size: 130%;
+    
 }
 
 /*Botão*/

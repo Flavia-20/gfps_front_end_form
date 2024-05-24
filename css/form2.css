@@ -22,46 +22,6 @@ main{
     margin-top: 3%;
 }
 
-/*inicio cabeçalho*/
-
-/*.Cabecalhodiv{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2%;
-    margin: 2%;
-    position: relative;
-}
-  
-.CabecalhoHeader {
-    background-color: #000DFF;
-    min-height: 25vh;
-    min-width: 15vw;
-    width: 70vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content:space-around;
-    font-size: calc(10px + 2vmin);
-    color: rgb(255, 244, 244);
-    border-radius: 15px;
-    flex-wrap: wrap;
-    box-shadow: 7px 0px 10px rgba(0, 0, 0, 0.308);
-}
-  
-.Cabecalhologo {
-    height: 20vmin;
-    pointer-events: none;
-    align-items: left;
-}
-
-h1{
-    width: 70%;
-    font-family: "Rubik", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}*/
 
 .CardCabecalho{
     display: flex;
@@ -155,12 +115,13 @@ button{
     color: white;
     height: 10%;
     width: auto;
-    padding: 0.7% 2%;
+    padding: 1%;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-family: "Rubik", sans-serif;
     white-space: nowrap;
+    font-size:large;
 }
 
 #btnsubmit{
@@ -179,7 +140,7 @@ button{
 a{
     text-decoration: none;
     color: white;
-    font-size: 130%;
+   
 }
 
 /*Botão*/
