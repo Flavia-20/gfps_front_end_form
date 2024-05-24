@@ -1,10 +1,6 @@
 const url = "https://apiformulariojava.azurewebsites.net/formulario";
 
-/*const url = fetch("https://apiformulariojava.azurewebsites.net/formulario")
-console.log(url)*/
-
 //pegando as tags do HTML
-//const FormCabecalho = document.querySelector(".CardCabecalho");
 const FormCardPergunta = document.querySelector("#container");
 
 async function getForm(){
@@ -44,9 +40,6 @@ async function getForm(){
                 perguntaElemento.innerHTML = pergunta.descricao;
                 perguntaElemento.setAttribute('data-id',  pergunta.id);
 
-                //idPergunta.innerHTML = pergunta.id;
-
-                //FormCardPergunta.appendChild(idPergunta);
                 FormCardPergunta.appendChild(perguntaElemento);
                 CardDivPergunta.appendChild(FormCardPergunta);
 
@@ -66,7 +59,7 @@ async function getForm(){
                     const label = document.createElement('label');
                     label.textContent = alternativas.descricao;
 
-                    label.setAttribute('data-id',  pergunta.id);
+                    respostaElemento.setAttribute('data-id', alternativas.id);
 
                     alternativaContainer.appendChild(respostaElemento);
                     alternativaContainer.appendChild(label);

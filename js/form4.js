@@ -50,21 +50,3 @@ async function getForm(){
 getForm()
 
 
-
-function submitForm() {
-    const form = document.getElementById('quizForm');
-    const formData = new FormData(form);
-    const entries = Array.from(formData.entries());
-
-    if (entries.length < 1 || entries[0][1].trim() === '') {
-        alert('Por favor, responda a pergunta.');
-        return;
-    }
-
-    let results = '';
-    entries.forEach(([question, answer], index) => {
-        results += `Pergunta ${index + 1}: ${answer}\n`;
-    });
-
-    alert(results);
-}
