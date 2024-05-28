@@ -5,11 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://127.0.0.1:5502/html/form2.html",
+            "webRoot": "${workspaceFolder}"
+        },
+        /*{
             "type": "chrome",
             "request": "launch",
             "name": "Launch Chrome against localhost",
-            "url": "http://127.0.0.1:5501/html/form2.html",
+            "url": "http://127.0.0.1:5502/html/form.html",
             "webRoot": "${workspaceFolder}"
-        }
+        }*/
     ]
 }

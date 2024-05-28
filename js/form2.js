@@ -25,7 +25,7 @@ async function getForm(){
             //FormCabecalho.appendChild(divform);
 
             //trabalhando com as perguntas 
-            const startIndex = 4;
+            const startIndex = 3;
             const endIndex = 12;
             formulario.perguntasEntities.slice(startIndex, endIndex).forEach((pergunta) => {
             

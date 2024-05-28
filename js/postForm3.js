@@ -1,24 +1,30 @@
-const postUrl = "https://apiformulariojava.azurewebsites.net/resposta";
-
-const butao = document.getElementById('enviar');
-
 async function postResposta(listaRespostas) {
     try {
-        const response = await fetch(postUrl, {
+
+        let data = {
+            respostaUsuarios: listaRespostas
+        };
+
+        const response = await fetch("https://apiformulariojava.azurewebsites.net/resposta", {
             method: "POST",
-            body: listaRespostas,
+            body: JSON.stringify(data),
             headers: {
                 "Content-Type": "application/json",
             },
         });
-        const data = await response.json();
-        console.log(data);
+
+         //await response.json();
+         console.log(response);
+         
       //  window.location.href = '../html/form3.html';
-    
+
+
     } catch (error) {
         console.error('Erro ao postar a resposta:', error.message);
     }
 }
+
+const butao = document.getElementById('enviar');
 
 function verificarInputs() {
 
@@ -36,12 +42,10 @@ function verificarInputs() {
                 if (input.value) {
               
                     let resposta = {
-                        perguntaId: perguntaContador,
-                        inputId: input.getAttribute('data-id'),
-                        inputValue: input.value,
+                        idPergunta: perguntaContador,
+                        idAlternativa: [input.getAttribute('data-id')],
+                        respostaDissertativa: input.value,
                     };
-                    console.log(resposta);
-                    resposta = JSON.stringify(resposta);
                 
                     listaRespostas.push(resposta);    
                     perguntaContador++;
@@ -50,26 +54,24 @@ function verificarInputs() {
                 if (input.checked) {
                     let resposta = {
                         idPergunta: perguntaContador,
-                        idAlternativa: input.getAttribute('data-id'),
+                        idAlternativa: [parseInt(input.getAttribute('data-id'))],
                         respostaDissertativa: null,
                         //inputValue: input.value,
                     };
-                    console.log(resposta);
-                    resposta = JSON.stringify(resposta);     
+                    listaRespostas.push(resposta);   
                     perguntaContador++;
                 }
             } else if (input.type === 'radio') {   
                     if (input.checked) {
                         let resposta = {
                             idPergunta: perguntaContador,
-                            idAlternativa: input.getAttribute('data-id'),
+                            idAlternativa: [parseInt(input.getAttribute('data-id'))],
                             respostaDissertativa: null,
                             //inputValue: input.value,
                         };
                         //console.log(resposta);
-                        resposta = JSON.stringify(resposta);
+        
                         listaRespostas.push(resposta);   
-                        console.log(listaRespostas); 
                         perguntaContador++;
             }
         }   
