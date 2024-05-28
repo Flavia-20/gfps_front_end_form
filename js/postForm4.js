@@ -1,24 +1,29 @@
-const postUrl = "https://apiformulariojava.azurewebsites.net/resposta";
-
-//const butao = document.getElementById('enviar');
-
 async function postResposta(listaRespostas) {
     try {
-        const response = await fetch(postUrl, {
+
+        let data = {
+            respostaUsuarios: listaRespostas
+        };
+
+        const response = await fetch("https://apiformulariojava.azurewebsites.net/resposta", {
             method: "POST",
-            body: listaRespostas,
+            body: JSON.stringify(data),
             headers: {
                 "Content-Type": "application/json",
             },
         });
-        const data = await response.json();
-        console.log(data);
-      //  window.location.href = '../html/form3.html';
-    
+
+        console.log(await response.json());
+
+        //  window.location.href = '../html/form3.html';
+
+
     } catch (error) {
         console.error('Erro ao postar a resposta:', error.message);
     }
 }
+
+//const butao = document.getElementById('enviar');
 
 /*function verificarInputs() {
 
@@ -38,7 +43,6 @@ async function postResposta(listaRespostas) {
                         inputValue: input.value,
                     };
                     console.log(resposta);
-                    resposta = JSON.stringify(resposta);
                 
                     listaRespostas.push(resposta);    
                     perguntaContador++;
@@ -67,25 +71,25 @@ function submitForm() {
     });
     alert(results);*/
 
-   else{
-    const container = document.getElementById('question');
-    const textArea = container.querySelectorAll('textarea');
-    let perguntaContador = 17;
+    else {
 
-    listaRespostas = [];
-    
-        if (textArea.value) {
-            let resposta = {
-                idPergunta: perguntaContador,
-                idAlternativa: input.getAttribute('data-id'),
-                respostaDissertativa: textArea.value,
-            };
-            console.log(resposta);
-            resposta = JSON.stringify(resposta);
-            listaRespostas.push(resposta);    
-            perguntaContador++;
-        }
-    } 
-       
-postResposta(listaRespostas); 
+        var respostaDoUsuario = entries[0][1]
+
+
+        let perguntaContador = 17;
+
+        listaRespostas = [];
+
+        let resposta = {
+            idPergunta: perguntaContador,
+            idAlternativa: [16],
+            respostaDissertativa: respostaDoUsuario,
+        };
+
+        listaRespostas.push(resposta);
+        perguntaContador++;
+
+    }
+
+    postResposta(listaRespostas);
 }
